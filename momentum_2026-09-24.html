@@ -1,4 +1,5 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>momentum_2026-09-24</title><style>
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>momentum_2026-09-24</title><style>
 @font-face {
   font-family: "MomentumCJK";
   src: url("file:///System/Library/Fonts/Supplemental/Arial%20Unicode.ttf") format("truetype");
@@ -129,23 +130,61 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
     color: #334155;
   }
 }
+
+body { background: #f5f8f6; }
+main { max-width: 1050px; }
+.report-date { font-weight: 700; margin: 2px 0 14px; }
+.report-section, .report-subsection, .report-drilldown { border: 0; border-top: 1px solid #dbe5df; margin: 0; }
+.report-section > summary, .report-subsection > summary, .report-drilldown > summary {
+  cursor: pointer; display: list-item; list-style-position: inside; color: #143c39; font-weight: 750;
+}
+.report-section > summary { font-size: 19px; padding: 16px 0 12px; }
+.report-subsection > summary { font-size: 16px; padding: 13px 0 10px; }
+.report-drilldown > summary { font-size: 15px; padding: 11px 0 9px; }
+.report-section > summary h2, .report-subsection > summary h3, .report-drilldown > summary h4 {
+  display: inline; border: 0; margin: 0; padding: 0; font-size: inherit; line-height: 1.4;
+}
+.report-section[open] > summary, .report-subsection[open] > summary { color: #087669; }
+.report-subsection { margin-left: 12px; }
+.report-drilldown { margin-left: 12px; }
+.method-note { display: inline-block; position: relative; vertical-align: middle; margin: 4px 0 7px; }
+.method-note > summary {
+  list-style: none; cursor: pointer; display: inline-grid; place-items: center; width: 25px; height: 25px;
+  border: 1px solid #819891; border-radius: 50%; color: #315950; background: #fff; font-size: 15px; font-weight: 750;
+}
+.method-note > summary::-webkit-details-marker { display: none; }
+.method-note[open] > .note-body {
+  position: absolute; top: 31px; left: 0; z-index: 10; width: min(490px, calc(100vw - 42px));
+  padding: 13px 16px; border: 1px solid #b8cbc4; background: #fff; color: #243d39;
+  box-shadow: 0 10px 22px rgba(20, 50, 45, .13); font-size: 13px; line-height: 1.55;
+}
+.method-note blockquote { background: none; border: 0; padding: 0; margin: 0; font-size: inherit; }
+.method-note p { font-size: inherit; margin: 0; }
+.report-section > table, .report-subsection > table { margin-top: 10px; }
+@media (max-width: 720px) {
+  .report-section > summary { font-size: 17px; }
+  .report-subsection { margin-left: 4px; }
+  .report-drilldown { margin-left: 4px; }
+  .report-drilldown > summary { overflow-wrap: anywhere; }
+  .method-note[open] > .note-body { left: 0; }
+}
 </style></head><body><main><h1>A股每日动量报告</h1>
-<p>交易日期：2026-09-24 数据源：DuckDB 本地数据库（momentum.duckdb） 基准指数：上证指数 报告口径：正式历史数据口径。 数据更新：<strong>本报告使用 2026-09-24 收盘后数据，最近拉取/入库时间 2026-09-27 16:14:06.861487；个股5485行、ETF1516行、核心指数7行，个股行情时间2026-09-24 15:00:00至2026-09-24 15:00:00；ETF行情时间2026-09-24 15:00:00至2026-09-24 15:00:00；核心指数行情时间2026-09-24 15:00:00至2026-09-24 15:00:00；收盘确认：全部通过；来源：个股=eastmoney_direct,tencent_kline_estimated_amount；ETF=tencent_kline_estimated_amount；核心指数=sina_kline_estimated_amount。</strong></p>
-<hr>
-<h2>0. 数据更新状态</h2>
+<p class="report-date">交易日期：2026-09-24</p><details class="method-note"><summary aria-label="查看数据来源与更新口径" title="数据来源与更新口径">?</summary><div class="note-body"><p>交易日期：2026-09-24 数据源：DuckDB 本地数据库（momentum.duckdb） 基准指数：上证指数 报告口径：正式历史数据口径。 数据更新：<strong>本报告使用 2026-09-24 收盘后数据，最近拉取/入库时间 2026-09-27 16:14:06.861487；个股5485行、ETF1516行、核心指数7行，个股行情时间2026-09-24 15:00:00至2026-09-24 15:00:00；ETF行情时间2026-09-24 15:00:00至2026-09-24 15:00:00；核心指数行情时间2026-09-24 15:00:00至2026-09-24 15:00:00；收盘确认：全部通过；来源：个股=eastmoney_direct,tencent_kline_estimated_amount；ETF=tencent_kline_estimated_amount；核心指数=sina_kline_estimated_amount。</strong></p></div></details>
+
+<details class="report-section"><summary><h2>0. 数据更新状态</h2></summary>
 <table>
 <tr><th>数据集</th><th>最新日期</th><th>记录数</th><th>状态</th></tr>
 <tr><td data-label="数据集">个股日线</td><td data-label="最新日期">2026-09-24</td><td data-label="记录数">18184799</td><td data-label="状态">ok</td></tr>
 <tr><td data-label="数据集">ETF日线</td><td data-label="最新日期">2026-09-24</td><td data-label="记录数">1617176</td><td data-label="状态">ok</td></tr>
 <tr><td data-label="数据集">指数日线</td><td data-label="最新日期">2026-09-24</td><td data-label="记录数">32437</td><td data-label="状态">ok</td></tr>
 </table>
-<hr>
-<h2>1. 一句话结论</h2>
+
+</details><details class="report-section" open=""><summary><h2>1. 一句话结论</h2></summary>
 <p>今天市场处于：<strong>偏弱状态</strong></p>
 <p>理由：</p>
 <ul><li>宽基指数站上MA20的有 0/7 个</li><li>全A站上20日线比例 39.51%（较上一交易日48.50%下降8.99个百分点）</li><li>风格上攻守混合</li><li>申万行业 ETF 代表池上行业动量整体偏弱，多数方向处于下行或调整</li></ul>
-<hr>
-<h2>2. 市场温度</h2>
+
+</details><details class="report-section" open=""><summary><h2>2. 市场温度</h2></summary>
 <p>市场温度分：23 / 100</p>
 <table>
 <tr><th>维度</th><th>得分</th><th>满分</th><th>依据</th></tr>
@@ -156,9 +195,9 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="维度"><strong>合计</strong></td><td data-label="得分">23</td><td data-label="满分">100</td><td data-label="依据"></td></tr>
 </table>
 <p>动量仓位规则信号：<strong>少做或只观察</strong></p>
-<hr>
-<h2>3. 宽基指数状态表</h2>
-<blockquote>覆盖A股主要宽基指数，判断标准是收盘价是否站上20日/60日均线。MA20代表中期趋势，MA60代表长期趋势。结论综合均线位置和近期涨幅给出：强势（站上MA20+5日正+20日跌幅&lt;3%）、弱势（跌破MA20）、震荡（其余）。</blockquote>
+
+</details><details class="report-section"><summary><h2>3. 宽基指数状态表</h2></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>覆盖A股主要宽基指数，判断标准是收盘价是否站上20日/60日均线。MA20代表中期趋势，MA60代表长期趋势。结论综合均线位置和近期涨幅给出：强势（站上MA20+5日正+20日跌幅&lt;3%）、弱势（跌破MA20）、震荡（其余）。</blockquote></div></details>
 <table>
 <tr><th>指数</th><th>收盘</th><th>今日涨幅</th><th>5日涨幅</th><th>20日涨幅</th><th>MA20</th><th>MA60</th><th>结论</th></tr>
 <tr><td data-label="指数">上证指数</td><td data-label="收盘">3888.37</td><td data-label="今日涨幅"><span class="pct-neg">-1.22%</span></td><td data-label="5日涨幅"><span class="pct-pos">+0.33%</span></td><td data-label="20日涨幅"><span class="pct-neg">-1.72%</span></td><td data-label="MA20">否</td><td data-label="MA60">否</td><td data-label="结论">弱势</td></tr>
@@ -169,9 +208,9 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="指数">中证1000</td><td data-label="收盘">7570.15</td><td data-label="今日涨幅"><span class="pct-neg">-2.26%</span></td><td data-label="5日涨幅"><span class="pct-pos">+0.28%</span></td><td data-label="20日涨幅"><span class="pct-neg">-2.11%</span></td><td data-label="MA20">否</td><td data-label="MA60">否</td><td data-label="结论">弱势</td></tr>
 <tr><td data-label="指数">上证50</td><td data-label="收盘">2842.74</td><td data-label="今日涨幅"><span class="pct-neg">-1.42%</span></td><td data-label="5日涨幅"><span class="pct-neg">-0.05%</span></td><td data-label="20日涨幅"><span class="pct-neg">-2.99%</span></td><td data-label="MA20">否</td><td data-label="MA60">否</td><td data-label="结论">弱势</td></tr>
 </table>
-<hr>
-<h2>4. 风格强弱</h2>
-<blockquote>用代表性宽基指数区分市场风格：进攻型（中小盘、成长）vs 防守型（大盘、价值）。当进攻方向整体跑赢防守方向时，视为风格偏进攻；反之偏防守。风格割裂指两者方向不一致。</blockquote>
+
+</details><details class="report-section"><summary><h2>4. 风格强弱</h2></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>用代表性宽基指数区分市场风格：进攻型（中小盘、成长）vs 防守型（大盘、价值）。当进攻方向整体跑赢防守方向时，视为风格偏进攻；反之偏防守。风格割裂指两者方向不一致。</blockquote></div></details>
 <p>进攻方向5日平均涨幅 -0.14%；防守方向5日平均涨幅 -0.06%。</p>
 <p>风格判断：<strong>攻守混合</strong></p>
 <table>
@@ -183,13 +222,51 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="指数">中证500</td><td data-label="类型">进攻</td><td data-label="5日涨幅"><span class="pct-neg">-0.40%</span></td><td data-label="20日涨幅"><span class="pct-neg">-4.06%</span></td><td data-label="MA20">否</td><td data-label="MA60">否</td></tr>
 <tr><td data-label="指数">沪深300</td><td data-label="类型">防守</td><td data-label="5日涨幅"><span class="pct-neg">-0.47%</span></td><td data-label="20日涨幅"><span class="pct-neg">-4.13%</span></td><td data-label="MA20">否</td><td data-label="MA60">否</td></tr>
 </table>
-<hr>
-<h2>5. 申万行业 ETF 代表池</h2>
+
+</details><details class="report-section" open=""><summary><h2>5. 申万行业 ETF 代表池</h2></summary>
 <p>固定纳入 26 个申万行业 ETF 代理；未映射行业：纺织服饰、轻工制造、商贸零售、综合、美容护理；强势行业：房地产(100分)、通信(75分)、银行(70分)；弱势方向：非银金融(0分)、环保(0分)、电力设备(0分)、公用事业(0分)、农林牧渔(0分)</p>
 <p>行业方向判断：<strong>行业动量整体偏弱，多数方向处于下行或调整</strong></p>
 <p>申万行业 ETF 代表池站上MA20：<strong>2/26（7.69%）</strong>；近20日趋势：<strong>下降</strong></p>
-<h3>5.1 全板块总体扫描</h3>
-<blockquote>数据来源：权益类 ETF，用 ETF 名称映射到申万风格行业桶；同一行业只保留一个代表 ETF。宽基、风格、红利、双创、科创等不能直接对应申万行业的 ETF 不计入行业广度。已剔除货币、债券、现金、商品和境外指数等非A股权益方向。动量分 = 站上MA20(30) + 20日均线斜率向上(20) + 5日涨幅为正(15) + 20日涨幅为正(15) + 站上MA60(10) + 成交额放大(10)，满分100。下表为行业代表池全表，按动量分、20日涨幅和成交额排序。</blockquote>
+<details class="report-subsection" open=""><summary><h3>5.1 当日行业动量前三</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>排名直接取下方26个固定申万行业 ETF 代理的当日动量分，不使用主题池或关键词股票池另排。当前尚无可用的申万行业成分快照，因此不把名称关键词命中的股票称为该行业成分股。</blockquote></div></details>
+<details class="report-drilldown"><summary><h4>第1名 房地产 · 100分 · 今日<span class="pct-neg">-2.18%</span> · MA20上方是</h4></summary>
+<table>
+<tr><th>指标</th><th>结果</th></tr>
+<tr><td data-label="指标">固定代理</td><td data-label="结果">南方中证全指房地产ETF（512200.SH）</td></tr>
+<tr><td data-label="指标">5日 / 20日涨幅</td><td data-label="结果"><span class="pct-pos">+6.08%</span> / <span class="pct-pos">+1.86%</span></td></tr>
+<tr><td data-label="指标">MA20 / 20日线斜率</td><td data-label="结果">是 / <span class="pct-pos">+1.14%</span></td></tr>
+<tr><td data-label="指标">成交额比值</td><td data-label="结果">1.04</td></tr>
+<tr><td data-label="指标">交易拥挤度 / 5日变化</td><td data-label="结果"><strong>87.6%</strong> / <span class="pct-pos">+64.0个百分点</span></td></tr>
+<tr><td data-label="指标">历史位置</td><td data-label="结果"><strong>历史高位</strong>；近250日高位日 2026-09-21，低位日 2026-06-30</td></tr>
+<tr><td data-label="指标">拥挤度主导因素</td><td data-label="结果">波动/偏离</td></tr>
+<tr><td data-label="指标">方向判断</td><td data-label="结果">强势</td></tr>
+</table>
+</details><details class="report-drilldown"><summary><h4>第2名 通信 · 75分 · 今日<span class="pct-neg">-2.61%</span> · MA20上方是</h4></summary>
+<table>
+<tr><th>指标</th><th>结果</th></tr>
+<tr><td data-label="指标">固定代理</td><td data-label="结果">嘉实国证通信ETF（159695.SZ）</td></tr>
+<tr><td data-label="指标">5日 / 20日涨幅</td><td data-label="结果"><span class="pct-neg">-1.02%</span> / <span class="pct-pos">+0.10%</span></td></tr>
+<tr><td data-label="指标">MA20 / 20日线斜率</td><td data-label="结果">是 / <span class="pct-pos">+1.39%</span></td></tr>
+<tr><td data-label="指标">成交额比值</td><td data-label="结果">0.77</td></tr>
+<tr><td data-label="指标">交易拥挤度 / 5日变化</td><td data-label="结果"><strong>10.8%</strong> / <span class="pct-neg">-48.0个百分点</span></td></tr>
+<tr><td data-label="指标">历史位置</td><td data-label="结果"><strong>历史低位</strong>；近250日高位日 2026-04-23，低位日 2025-10-16</td></tr>
+<tr><td data-label="指标">拥挤度主导因素</td><td data-label="结果">偏离/动量</td></tr>
+<tr><td data-label="指标">方向判断</td><td data-label="结果">强势</td></tr>
+</table>
+</details><details class="report-drilldown"><summary><h4>第3名 银行 · 70分 · 今日<span class="pct-pos">+0.72%</span> · MA20上方否</h4></summary>
+<table>
+<tr><th>指标</th><th>结果</th></tr>
+<tr><td data-label="指标">固定代理</td><td data-label="结果">华宝中证银行ETF（512800.SH）</td></tr>
+<tr><td data-label="指标">5日 / 20日涨幅</td><td data-label="结果"><span class="pct-pos">+0.24%</span> / <span class="pct-pos">+2.44%</span></td></tr>
+<tr><td data-label="指标">MA20 / 20日线斜率</td><td data-label="结果">否 / <span class="pct-pos">+0.44%</span></td></tr>
+<tr><td data-label="指标">成交额比值</td><td data-label="结果">1.11</td></tr>
+<tr><td data-label="指标">交易拥挤度 / 5日变化</td><td data-label="结果"><strong>70.4%</strong> / <span class="pct-pos">+12.8个百分点</span></td></tr>
+<tr><td data-label="指标">历史位置</td><td data-label="结果"><strong>历史中位</strong>；近250日高位日 2026-07-17，低位日 2026-05-25</td></tr>
+<tr><td data-label="指标">拥挤度主导因素</td><td data-label="结果">动量/成交</td></tr>
+<tr><td data-label="指标">方向判断</td><td data-label="结果">强势</td></tr>
+</table>
+</details></details><details class="report-subsection"><summary><h3>5.2 全板块总体扫描</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>数据来源：权益类 ETF，用 ETF 名称映射到申万风格行业桶；同一行业只保留一个代表 ETF。宽基、风格、红利、双创、科创等不能直接对应申万行业的 ETF 不计入行业广度。已剔除货币、债券、现金、商品和境外指数等非A股权益方向。动量分 = 站上MA20(30) + 20日均线斜率向上(20) + 5日涨幅为正(15) + 20日涨幅为正(15) + 站上MA60(10) + 成交额放大(10)，满分100。下表为行业代表池全表，按动量分、20日涨幅和成交额排序。</blockquote></div></details>
 <table class="wide-table">
 <tr><th>排名</th><th>申万对应行业</th><th>ETF代码</th><th>ETF名称</th><th>动量分</th><th>今日涨幅</th><th>5日涨幅</th><th>20日涨幅</th><th>站上MA20</th><th>20日线斜率</th><th>成交额比值</th><th>结论</th></tr>
 <tr><td data-label="排名">1</td><td data-label="申万对应行业">房地产</td><td data-label="ETF代码">512200.SH</td><td data-label="ETF名称">南方中证全指房地产ETF</td><td data-label="动量分">100</td><td data-label="今日涨幅"><span class="pct-neg">-2.18%</span></td><td data-label="5日涨幅"><span class="pct-pos">+6.08%</span></td><td data-label="20日涨幅"><span class="pct-pos">+1.86%</span></td><td data-label="站上MA20">是</td><td data-label="20日线斜率"><span class="pct-pos">+1.14%</span></td><td data-label="成交额比值">1.04</td><td data-label="结论">强势</td></tr>
@@ -219,8 +296,8 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="排名">25</td><td data-label="申万对应行业">公用事业</td><td data-label="ETF代码">159301.SZ</td><td data-label="ETF名称">华夏中证全指公用事业ETF</td><td data-label="动量分">0</td><td data-label="今日涨幅"><span class="pct-neg">-0.10%</span></td><td data-label="5日涨幅"><span class="pct-neg">-0.73%</span></td><td data-label="20日涨幅"><span class="pct-neg">-1.34%</span></td><td data-label="站上MA20">否</td><td data-label="20日线斜率"><span class="pct-neg">-0.07%</span></td><td data-label="成交额比值">0.78</td><td data-label="结论">弱势</td></tr>
 <tr><td data-label="排名">26</td><td data-label="申万对应行业">农林牧渔</td><td data-label="ETF代码">159825.SZ</td><td data-label="ETF名称">富国中证农业主题ETF</td><td data-label="动量分">0</td><td data-label="今日涨幅"><span class="pct-neg">-2.06%</span></td><td data-label="5日涨幅"><span class="pct-neg">-2.20%</span></td><td data-label="20日涨幅"><span class="pct-neg">-4.56%</span></td><td data-label="站上MA20">否</td><td data-label="20日线斜率"><span class="pct-neg">-0.04%</span></td><td data-label="成交额比值">0.71</td><td data-label="结论">弱势</td></tr>
 </table>
-<h3>5.2 行业交易拥挤度</h3>
-<blockquote>拥挤度表示当前交易热度在该行业ETF自身近250个交易日中的历史分位。内部交易热度综合成交活跃、20日波动、距MA20偏离和20日动量，仅用于计算分位，不作为评分展示。至少需要60个有效交易日；百分比越高表示相对自身历史越拥挤，但不等于持仓集中度或趋势立即反转。</blockquote>
+</details><details class="report-subsection"><summary><h3>5.3 行业交易拥挤度</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>拥挤度表示当前交易热度在该行业ETF自身近250个交易日中的历史分位。内部交易热度综合成交活跃、20日波动、距MA20偏离和20日动量，仅用于计算分位，不作为评分展示。至少需要60个有效交易日；百分比越高表示相对自身历史越拥挤，但不等于持仓集中度或趋势立即反转。</blockquote></div></details>
 <p>行业交易拥挤度覆盖 26 个固定行业ETF；历史极高位 0 个、历史高位 1 个、历史中位 5 个、历史偏低位 10 个、历史低位 10 个。当前拥挤度最高：房地产(87.6%)、银行(70.4%)、医药生物(70.0%)、汽车(64.8%)、传媒(56.4%)。</p>
 <table>
 <tr><th>排名</th><th>行业</th><th>代表ETF</th><th>拥挤度</th><th>5日变化</th><th>历史位置</th><th>近250日高/低位日</th><th>主导因素</th></tr>
@@ -251,9 +328,9 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="排名">25</td><td data-label="行业">电力设备</td><td data-label="代表ETF">159326.SZ&lt;br&gt;华夏中证电网设备主题ETF</td><td data-label="拥挤度"><strong>1.6%</strong></td><td data-label="5日变化"><span class="pct-neg">-10.0个百分点</span></td><td data-label="历史位置"><strong>历史低位</strong></td><td data-label="近250日高/低位日">高位日 2025-11-05&lt;br&gt;低位日 2026-09-14</td><td data-label="主导因素">偏离/动量</td></tr>
 <tr><td data-label="排名">26</td><td data-label="行业">机械设备</td><td data-label="代表ETF">159886.SZ&lt;br&gt;富国中证细分机械设备产业主题ETF</td><td data-label="拥挤度"><strong>0.8%</strong></td><td data-label="5日变化"><span class="pct-neg">-9.6个百分点</span></td><td data-label="历史位置"><strong>历史低位</strong></td><td data-label="近250日高/低位日">高位日 2025-09-15&lt;br&gt;低位日 2026-06-09</td><td data-label="主导因素">偏离/成交</td></tr>
 </table>
-<blockquote>拥挤度就是自身近250日历史分位。例如82%表示当前交易热度高于约82%的历史交易日；它不是评分，也不是基金持仓集中度。高拥挤且仍站上MA20表示趋势尚在但追高风险增加，高拥挤后跌破MA20则重点复核退潮风险。</blockquote>
-<h3>5.3 主题观察池</h3>
-<blockquote>主题观察池不计入申万行业广度；科创相关只保留科创芯片/半导体一个观察项，避免与科创50/科创100/科创综指重复。</blockquote>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>拥挤度就是自身近250日历史分位。例如82%表示当前交易热度高于约82%的历史交易日；它不是评分，也不是基金持仓集中度。高拥挤且仍站上MA20表示趋势尚在但追高风险增加，高拥挤后跌破MA20则重点复核退潮风险。</blockquote></div></details>
+</details><details class="report-subsection"><summary><h3>5.4 主题观察池</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>主题观察池不计入申万行业广度；科创相关只保留科创芯片/半导体一个观察项，避免与科创50/科创100/科创综指重复。</blockquote></div></details>
 <table class="wide-table">
 <tr><th>观察项</th><th>角色</th><th>代理ETF</th><th>主线分/状态</th><th>今日涨幅</th><th>5日涨幅</th><th>20日涨幅</th><th>成交额</th><th>量比</th><th>说明</th></tr>
 <tr><td data-label="观察项">科创芯片/半导体</td><td data-label="角色">进攻主线</td><td data-label="代理ETF">588200.SH&lt;br&gt;嘉实上证科创板芯片ETF</td><td data-label="主线分/状态">58.3&lt;br&gt;中性震荡</td><td data-label="今日涨幅"><span class="pct-neg">-2.4%</span></td><td data-label="5日涨幅"><span class="pct-pos">+1.7%</span></td><td data-label="20日涨幅"><span class="pct-neg">-3.6%</span></td><td data-label="成交额">19.1亿</td><td data-label="量比">0.81</td><td data-label="说明">科创相关只保留这一项，避免与科创50/科创100/科创综指重复。</td></tr>
@@ -266,8 +343,8 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="观察项">电网设备</td><td data-label="角色">政策/设备主题</td><td data-label="代理ETF">159326.SZ&lt;br&gt;华夏中证电网设备主题ETF</td><td data-label="主线分/状态">20.2&lt;br&gt;退潮加深</td><td data-label="今日涨幅"><span class="pct-neg">-1.8%</span></td><td data-label="5日涨幅"><span class="pct-neg">-0.9%</span></td><td data-label="20日涨幅"><span class="pct-neg">-3.8%</span></td><td data-label="成交额">2.3亿</td><td data-label="量比">0.60</td><td data-label="说明">20日震荡偏弱，均线结构偏弱，暂作一般观察。</td></tr>
 <tr><td data-label="观察项">新能源车/电池</td><td data-label="角色">周期修复主题</td><td data-label="代理ETF">515030.SH&lt;br&gt;华夏中证新能源汽车ETF</td><td data-label="主线分/状态">15.0&lt;br&gt;弱势延续</td><td data-label="今日涨幅"><span class="pct-neg">-2.1%</span></td><td data-label="5日涨幅"><span class="pct-neg">-0.7%</span></td><td data-label="20日涨幅"><span class="pct-neg">-9.9%</span></td><td data-label="成交额">1.2亿</td><td data-label="量比">1.06</td><td data-label="说明">20日下行，均线结构偏弱，暂作一般观察。</td></tr>
 </table>
-<h3>5.4 前排Top3板块体检</h3>
-<blockquote>前排Top3板块成员仍为预览口径，当前按本地名称关键词/种子池筛选；正式版应替换为固定行业/主题成分表。</blockquote>
+</details><details class="report-subsection"><summary><h3>5.5 主题/关键词板块预览（非行业动量前三）</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>前排Top3板块成员仍为预览口径，当前按本地名称关键词/种子池筛选；正式版应替换为固定行业/主题成分表。</blockquote></div></details>
 <table>
 <tr><th>指标</th><th>科创芯片/半导体&lt;br&gt;588200.SH</th><th>AI人工智能&lt;br&gt;159819.SZ</th><th>通信/CPO&lt;br&gt;159695.SZ</th></tr>
 <tr><td data-label="指标">综合主线分</td><td data-label="科创芯片/半导体&lt;br&gt;588200.SH">78.6</td><td data-label="AI人工智能&lt;br&gt;159819.SZ">63.6</td><td data-label="通信/CPO&lt;br&gt;159695.SZ">61.7</td></tr>
@@ -292,7 +369,7 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="指标">代理涨跌</td><td data-label="科创芯片/半导体&lt;br&gt;588200.SH">当日<span class="pct-neg">-2.4%</span>&lt;br&gt;5日<span class="pct-pos">+1.7%</span>&lt;br&gt;20日<span class="pct-neg">-3.6%</span></td><td data-label="AI人工智能&lt;br&gt;159819.SZ">当日<span class="pct-neg">-1.8%</span>&lt;br&gt;5日<span class="pct-pos">+2.8%</span>&lt;br&gt;20日<span class="pct-pos">+0.5%</span></td><td data-label="通信/CPO&lt;br&gt;159695.SZ">当日<span class="pct-neg">-2.6%</span>&lt;br&gt;5日<span class="pct-neg">-1.0%</span>&lt;br&gt;20日<span class="pct-pos">+0.1%</span></td></tr>
 <tr><td data-label="指标">趋势说明</td><td data-label="科创芯片/半导体&lt;br&gt;588200.SH">趋势仍在强势区，但新高/龙头边际转弱；成员MA20为71%，先看核心股能否继续扩散。</td><td data-label="AI人工智能&lt;br&gt;159819.SZ">成员MA20仅45%，新高与龙头不足，当前更像退潮或弱修复。</td><td data-label="通信/CPO&lt;br&gt;159695.SZ">内部仍有一定修复面，但龙头/新高不足，暂按观察而非正式主线处理。</td></tr>
 </table>
-<h3>科创芯片/半导体 个股展开</h3>
+<details class="report-drilldown"><summary><h4>科创芯片/半导体 个股展开</h4></summary>
 <p>趋势仍在强势区，但新高/龙头边际转弱；成员MA20为71%，先看核心股能否继续扩散。 成员数115；成员MA20为71%；新高8个，龙头8个。</p>
 <table>
 <tr><th>个股</th><th>龙头像分</th><th>1日涨幅</th><th>5日涨幅</th><th>20日涨幅</th><th>MA20/MA60</th><th>成交额</th><th>量比</th><th>得分理由</th></tr>
@@ -305,7 +382,7 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="个股">瑞芯微&lt;br&gt;sh603893</td><td data-label="龙头像分">80.4</td><td data-label="1日涨幅"><span class="pct-neg">-1.8%</span></td><td data-label="5日涨幅"><span class="pct-pos">+20.9%</span></td><td data-label="20日涨幅"><span class="pct-pos">+20.8%</span></td><td data-label="MA20/MA60">是/是</td><td data-label="成交额">34.9亿</td><td data-label="量比">1.31</td><td data-label="得分理由">MA20/MA60上方；20日相对板块+24.3pct；量比1.31</td></tr>
 <tr><td data-label="个股">华微电子&lt;br&gt;sh600360</td><td data-label="龙头像分">80.0</td><td data-label="1日涨幅"><span class="pct-pos">+2.5%</span></td><td data-label="5日涨幅"><span class="pct-pos">+10.2%</span></td><td data-label="20日涨幅"><span class="pct-pos">+10.3%</span></td><td data-label="MA20/MA60">是/是</td><td data-label="成交额">9.3亿</td><td data-label="量比">1.39</td><td data-label="得分理由">MA20/MA60上方；20日新高；20日相对板块+13.9pct</td></tr>
 </table>
-<h3>AI人工智能 个股展开</h3>
+</details><details class="report-drilldown"><summary><h4>AI人工智能 个股展开</h4></summary>
 <p>成员MA20仅45%，新高与龙头不足，当前更像退潮或弱修复。 成员数136；成员MA20为45%；新高10个，龙头4个。</p>
 <table>
 <tr><th>个股</th><th>龙头像分</th><th>1日涨幅</th><th>5日涨幅</th><th>20日涨幅</th><th>MA20/MA60</th><th>成交额</th><th>量比</th><th>得分理由</th></tr>
@@ -318,7 +395,7 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="个股">慧博云通&lt;br&gt;sz301316</td><td data-label="龙头像分">73.7</td><td data-label="1日涨幅"><span class="pct-pos">+4.0%</span></td><td data-label="5日涨幅"><span class="pct-pos">+13.4%</span></td><td data-label="20日涨幅"><span class="pct-pos">+3.6%</span></td><td data-label="MA20/MA60">是/是</td><td data-label="成交额">9.8亿</td><td data-label="量比">2.43</td><td data-label="得分理由">MA20/MA60上方；20日新高；量比2.43</td></tr>
 <tr><td data-label="个股">亿田智能&lt;br&gt;sz300911</td><td data-label="龙头像分">73.0</td><td data-label="1日涨幅"><span class="pct-neg">-3.0%</span></td><td data-label="5日涨幅"><span class="pct-pos">+22.3%</span></td><td data-label="20日涨幅"><span class="pct-pos">+58.8%</span></td><td data-label="MA20/MA60">是/是</td><td data-label="成交额">4.3亿</td><td data-label="量比">0.82</td><td data-label="得分理由">MA20/MA60上方；20日相对板块+58.2pct</td></tr>
 </table>
-<h3>通信/CPO 个股展开</h3>
+</details><details class="report-drilldown"><summary><h4>通信/CPO 个股展开</h4></summary>
 <p>内部仍有一定修复面，但龙头/新高不足，暂按观察而非正式主线处理。 成员数81；成员MA20为48%；新高4个，龙头2个。</p>
 <table>
 <tr><th>个股</th><th>龙头像分</th><th>1日涨幅</th><th>5日涨幅</th><th>20日涨幅</th><th>MA20/MA60</th><th>成交额</th><th>量比</th><th>得分理由</th></tr>
@@ -331,10 +408,10 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="个股">四方光电&lt;br&gt;sh688665</td><td data-label="龙头像分">63.2</td><td data-label="1日涨幅"><span class="pct-pos">+0.6%</span></td><td data-label="5日涨幅"><span class="pct-pos">+9.4%</span></td><td data-label="20日涨幅"><span class="pct-pos">+5.2%</span></td><td data-label="MA20/MA60">是/是</td><td data-label="成交额">0.8亿</td><td data-label="量比">2.96</td><td data-label="得分理由">MA20/MA60上方；20日新高；量比2.96</td></tr>
 <tr><td data-label="个股">太辰光&lt;br&gt;sz300570</td><td data-label="龙头像分">61.7</td><td data-label="1日涨幅"><span class="pct-neg">-3.1%</span></td><td data-label="5日涨幅"><span class="pct-pos">+1.4%</span></td><td data-label="20日涨幅"><span class="pct-pos">+4.6%</span></td><td data-label="MA20/MA60">是/是</td><td data-label="成交额">25.5亿</td><td data-label="量比">0.72</td><td data-label="得分理由">MA20/MA60上方</td></tr>
 </table>
-<hr>
-<h2>6. 行业趋势与市场广度</h2>
-<h3>6.1 申万行业 MA20 广度</h3>
-<blockquote>以申万行业 ETF 代表池衡量行业层面的趋势扩散。站上MA20的行业越多，说明行情从少数方向向更多行业扩散；比例下降则说明结构性收缩。</blockquote>
+
+</details></details></details><details class="report-section"><summary><h2>6. 行业趋势与市场广度</h2></summary>
+<details class="report-subsection"><summary><h3>6.1 申万行业 MA20 广度</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>以申万行业 ETF 代表池衡量行业层面的趋势扩散。站上MA20的行业越多，说明行情从少数方向向更多行业扩散；比例下降则说明结构性收缩。</blockquote></div></details>
 <table>
 <tr><th>日期</th><th>站上MA20行业数</th><th>代表池数量</th><th>站上比例</th></tr>
 <tr><td data-label="日期">2026-08-28</td><td data-label="站上MA20行业数">14</td><td data-label="代表池数量">26</td><td data-label="站上比例">53.85%</td></tr>
@@ -359,8 +436,8 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="日期">2026-09-24</td><td data-label="站上MA20行业数">2</td><td data-label="代表池数量">26</td><td data-label="站上比例">7.69%</td></tr>
 </table>
 <p>行业扩散趋势：<strong>下降</strong></p>
-<h3>6.2 市场广度</h3>
-<blockquote>市场广度反映上涨股票的覆盖面，是判断行情质量的关键指标。站上MA20比例高说明多数股票参与上涨（健康牛市）；比例低说明只有少数股票抱团（结构性行情或弱势）。创20日新高数量反映市场活跃度。</blockquote>
+</details><details class="report-subsection"><summary><h3>6.2 市场广度</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>市场广度反映上涨股票的覆盖面，是判断行情质量的关键指标。站上MA20比例高说明多数股票参与上涨（健康牛市）；比例低说明只有少数股票抱团（结构性行情或弱势）。创20日新高数量反映市场活跃度。</blockquote></div></details>
 <table>
 <tr><th>指标</th><th>今日</th><th>上一交易日</th><th>变化</th></tr>
 <tr><td data-label="指标">全A可交易股票数</td><td data-label="今日">5485</td><td data-label="上一交易日">5485</td><td data-label="变化">+0</td></tr>
@@ -368,8 +445,8 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="指标">创20日新高</td><td data-label="今日">272</td><td data-label="上一交易日">631</td><td data-label="变化">-359</td></tr>
 </table>
 <p>动量扩散判断：<strong>收缩</strong></p>
-<h3>6.3 样本外研究验证层</h3>
-<blockquote>研究验证层不改变日报温度分、仓位信号或个股池。 研究数据截至 2026-07-10。</blockquote>
+</details><details class="report-subsection"><summary><h3>6.3 样本外研究验证层</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>研究验证层不改变日报温度分、仓位信号或个股池。 研究数据截至 2026-07-10。</blockquote></div></details>
 <table>
 <tr><th>研究字段</th><th>当前状态</th></tr>
 <tr><td data-label="研究字段">市场状态</td><td data-label="当前状态">修复</td></tr>
@@ -384,10 +461,10 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <ul><li>全A站上MA20比例：Rank IC -0.589，q值 0.000</li><li>全A等权20日收益：Rank IC -0.569，q值 0.000</li><li>成长宽基相对防守宽基20日收益差：Rank IC -0.221，q值 0.000</li></ul>
 <p>主要失效条件：</p>
 <ul><li>市场方向组合AUC 0.539，低于0.58，不转化为买卖信号</li><li>申万成分历史仅0个快照/0天，龙头扩散状态未正式启用</li></ul>
-<hr>
-<h2>7. 关键指标20日趋势</h2>
-<h3>7.1 市场广度与成交趋势</h3>
-<blockquote>过去20个交易日的关键指标走势。宽基站上MA20数反映指数层面的趋势强度；全A站上MA20比例反映个股层面的赚钱效应；成交额比值（当日成交额/20日均额）反映资金活跃度。三者同步上升为最佳信号。</blockquote>
+
+</details></details><details class="report-section"><summary><h2>7. 关键指标20日趋势</h2></summary>
+<details class="report-subsection"><summary><h3>7.1 市场广度与成交趋势</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>过去20个交易日的关键指标走势。宽基站上MA20数反映指数层面的趋势强度；全A站上MA20比例反映个股层面的赚钱效应；成交额比值（当日成交额/20日均额）反映资金活跃度。三者同步上升为最佳信号。</blockquote></div></details>
 <table>
 <tr><th>日期</th><th>宽基站上MA20数</th><th>全A站上MA20比例</th><th>成交额比值</th></tr>
 <tr><td data-label="日期">2026-08-28</td><td data-label="宽基站上MA20数">4</td><td data-label="全A站上MA20比例">59.04%</td><td data-label="成交额比值">1.11</td></tr>
@@ -412,8 +489,8 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="日期">2026-09-24</td><td data-label="宽基站上MA20数">0</td><td data-label="全A站上MA20比例">39.51%</td><td data-label="成交额比值">0.87</td></tr>
 </table>
 <p>广度趋势：<strong>↓ 下降</strong> | 成交趋势：<strong>↓ 下降</strong></p>
-<h3>7.2 上证指数 vs MA20</h3>
-<blockquote>上证指数收盘价与20日均线的对比。收盘价持续在MA20上方运行代表中期上升趋势；跌破MA20则进入调整。MA20的斜率方向（上升/下降）比单日的站上/跌破更重要。</blockquote>
+</details><details class="report-subsection"><summary><h3>7.2 上证指数 vs MA20</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>上证指数收盘价与20日均线的对比。收盘价持续在MA20上方运行代表中期上升趋势；跌破MA20则进入调整。MA20的斜率方向（上升/下降）比单日的站上/跌破更重要。</blockquote></div></details>
 <table>
 <tr><th>日期</th><th>收盘</th><th>MA20</th><th>站上</th></tr>
 <tr><td data-label="日期">2026-08-28</td><td data-label="收盘">3952.18</td><td data-label="MA20">3916.06</td><td data-label="站上">是</td></tr>
@@ -437,13 +514,13 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="日期">2026-09-23</td><td data-label="收盘">3936.52</td><td data-label="MA20">3930.15</td><td data-label="站上">是</td></tr>
 <tr><td data-label="日期">2026-09-24</td><td data-label="收盘">3888.37</td><td data-label="MA20">3926.74</td><td data-label="站上">否</td></tr>
 </table>
-<hr>
-<h2>8. 风险信号</h2>
+
+</details></details><details class="report-section" open=""><summary><h2>8. 风险信号</h2></summary>
 <ul><li>核心宽基站上MA20数量偏少：0/7</li><li>申万行业 ETF 代表池站上MA20比例偏低：2/26（7.69%）</li><li>行业交易拥挤度：1 个行业处于自身近250日历史高位，包括 房地产；需结合MA20和行业动量判断，历史高位本身不等于趋势反转。</li></ul>
-<hr>
-<h2>9. 个股观察池</h2>
-<h3>A类：核心动量观察标的（15 只）</h3>
-<blockquote>A类股票满足站上MA20、创20日新高、成交额放大且距离MA20不超过12%的机械条件。当前市场信号为“少做或只观察”，且宽基站上MA20为 0/7；机械候选只作观察，不视为正式买点。</blockquote>
+
+</details><details class="report-section"><summary><h2>9. 个股观察池</h2></summary>
+<details class="report-subsection"><summary><h3>A类：核心动量观察标的（15 只）</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>A类股票满足站上MA20、创20日新高、成交额放大且距离MA20不超过12%的机械条件。当前市场信号为“少做或只观察”，且宽基站上MA20为 0/7；机械候选只作观察，不视为正式买点。</blockquote></div></details>
 <table>
 <tr><th>股票名称</th><th>代码</th><th>5日涨幅</th><th>20日涨幅</th><th>距离MA20</th><th>成交额比值</th><th>技术形态</th></tr>
 <tr><td data-label="股票名称">平潭发展</td><td data-label="代码">sz000592</td><td data-label="5日涨幅"><span class="pct-pos">+4.90%</span></td><td data-label="20日涨幅"><span class="pct-pos">+28.93%</span></td><td data-label="距离MA20"><span class="pct-pos">+11.61%</span></td><td data-label="成交额比值">1.01</td><td data-label="技术形态">放量创新高</td></tr>
@@ -462,8 +539,8 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="股票名称">华阳变速</td><td data-label="代码">bj920146</td><td data-label="5日涨幅"><span class="pct-pos">+12.55%</span></td><td data-label="20日涨幅"><span class="pct-pos">+16.37%</span></td><td data-label="距离MA20"><span class="pct-pos">+10.37%</span></td><td data-label="成交额比值">4.20</td><td data-label="技术形态">放量创新高</td></tr>
 <tr><td data-label="股票名称">安彩高科</td><td data-label="代码">sh600207</td><td data-label="5日涨幅"><span class="pct-pos">+7.95%</span></td><td data-label="20日涨幅"><span class="pct-pos">+16.22%</span></td><td data-label="距离MA20"><span class="pct-pos">+9.82%</span></td><td data-label="成交额比值">2.71</td><td data-label="技术形态">放量创新高</td></tr>
 </table>
-<h3>B类：等待触发（15 只）</h3>
-<blockquote>B类股票趋势良好（5日涨幅为正）但尚未满足A类条件。属于观察池；只有市场信号允许且后续放量突破、距离MA20不过度偏离时，才可升级为动量触发候选。</blockquote>
+</details><details class="report-subsection"><summary><h3>B类：等待触发（15 只）</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>B类股票趋势良好（5日涨幅为正）但尚未满足A类条件。属于观察池；只有市场信号允许且后续放量突破、距离MA20不过度偏离时，才可升级为动量触发候选。</blockquote></div></details>
 <table>
 <tr><th>股票名称</th><th>代码</th><th>5日涨幅</th><th>20日涨幅</th><th>距离MA20</th><th>状态</th></tr>
 <tr><td data-label="股票名称">华维设计</td><td data-label="代码">bj920427</td><td data-label="5日涨幅"><span class="pct-pos">+26.38%</span></td><td data-label="20日涨幅"><span class="pct-pos">+23.35%</span></td><td data-label="距离MA20"><span class="pct-pos">+11.64%</span></td><td data-label="状态">趋势良好，等待突破</td></tr>
@@ -482,8 +559,8 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="股票名称">南威软件</td><td data-label="代码">sh603636</td><td data-label="5日涨幅"><span class="pct-pos">+19.94%</span></td><td data-label="20日涨幅"><span class="pct-pos">+14.74%</span></td><td data-label="距离MA20"><span class="pct-pos">+11.07%</span></td><td data-label="状态">趋势良好，等待突破</td></tr>
 <tr><td data-label="股票名称">惠通科技</td><td data-label="代码">sz301601</td><td data-label="5日涨幅"><span class="pct-pos">+19.92%</span></td><td data-label="20日涨幅"><span class="pct-pos">+9.81%</span></td><td data-label="距离MA20"><span class="pct-pos">+10.91%</span></td><td data-label="状态">趋势良好，等待突破</td></tr>
 </table>
-<h3>C类：只观察不追（15 只）</h3>
-<blockquote>C类股票短期涨幅过大（&gt;15%）或偏离MA20过远（&gt;10%），追高风险较大。用于跟踪强势方向，等待回调至MA20附近再考虑介入。</blockquote>
+</details><details class="report-subsection"><summary><h3>C类：只观察不追（15 只）</h3></summary>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>C类股票短期涨幅过大（&gt;15%）或偏离MA20过远（&gt;10%），追高风险较大。用于跟踪强势方向，等待回调至MA20附近再考虑介入。</blockquote></div></details>
 <table>
 <tr><th>股票名称</th><th>代码</th><th>5日涨幅</th><th>20日涨幅</th><th>距离MA20</th><th>原因</th></tr>
 <tr><td data-label="股票名称">ST豆神</td><td data-label="代码">sz300010</td><td data-label="5日涨幅"><span class="pct-pos">+8.10%</span></td><td data-label="20日涨幅"><span class="pct-pos">+71.70%</span></td><td data-label="距离MA20"><span class="pct-pos">+15.61%</span></td><td data-label="原因">涨幅或偏离较大</td></tr>
@@ -502,17 +579,17 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="股票名称">集泰股份</td><td data-label="代码">sz002909</td><td data-label="5日涨幅"><span class="pct-pos">+27.73%</span></td><td data-label="20日涨幅"><span class="pct-pos">+54.38%</span></td><td data-label="距离MA20"><span class="pct-pos">+15.31%</span></td><td data-label="原因">涨幅或偏离较大</td></tr>
 <tr><td data-label="股票名称">金健米业</td><td data-label="代码">sh600127</td><td data-label="5日涨幅"><span class="pct-pos">+26.65%</span></td><td data-label="20日涨幅"><span class="pct-pos">+52.97%</span></td><td data-label="距离MA20"><span class="pct-pos">+19.41%</span></td><td data-label="原因">涨幅或偏离较大</td></tr>
 </table>
-<hr>
-<h2>10. 明日观察计划</h2>
+
+</details></details><details class="report-section" open=""><summary><h2>10. 明日观察计划</h2></summary>
 <p>1. 复核强势方向是否继续扩散到更多个股。 2. 观察更多宽基能否重新站上 MA20，同时确认全A广度是否止跌回升。 3. 继续跟踪申万行业 ETF 代表池排名前列方向是否扩散到个股层面。 4. 跟踪 房地产 的拥挤度分位、5日变化和MA20状态；若高拥挤伴随跌破MA20，按退潮风险复核。</p>
-<hr>
-<h2>11. 明日情景推演与决策建议</h2>
+
+</details><details class="report-section" open=""><summary><h2>11. 明日情景推演与决策建议</h2></summary>
 <p>1. 基准情景：数据为正式口径，收盘确认全部通过，但个股与ETF日线存在少量缺失，成交额按典型价估算，仅作趋势参考。当前宽基0/7站上MA20，全A站上MA20比例39.51%且较前一日下降，扩散收缩，行业代表池仅2/26站上MA20，状态偏弱、信号为少做或只观察，基准情景延续偏弱震荡。</p>
 <p>2. 扩散/修复情景：若全A站上MA20比例由下降转为上升，且行业代表池站上MA20数量从2/26回升，同时宽基站上MA20数量由0/7增加，则修复扩散成立；房地产、通信已站上MA20且趋势向上，可作为行业动量的边际验证方向。</p>
 <p>3. 走弱/收缩情景：若全A站上MA20比例继续下降、行业代表池站上MA20数量继续减少，且宽基站上MA20数量维持0/7，则收缩加深；房地产拥挤度87.6%处历史高位，银行70.4%、医药生物70.0%处历史中位，需结合其MA20与动量判断，历史高位不等于趋势反转。</p>
 <p>4. 操作纪律与验证点：脚本信号为少做或只观察，候选池仅供观察，当前信号不开新仓；次日验证宽基站上MA20数量、全A站上MA20比例方向、行业代表池站上MA20数量及成交额是否由中性转弱。</p>
-<hr>
-<h3>关键价位速查</h3>
+
+<details class="report-subsection"><summary><h3>关键价位速查</h3></summary>
 <table>
 <tr><th>指数</th><th>当前收盘</th><th>MA20</th><th>MA60</th><th>站上MA20</th></tr>
 <tr><td data-label="指数">上证指数</td><td data-label="当前收盘">3888.37</td><td data-label="MA20">3926.74</td><td data-label="MA60">3913.69</td><td data-label="站上MA20">否</td></tr>
@@ -523,10 +600,10 @@ hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
 <tr><td data-label="指数">中证1000</td><td data-label="当前收盘">7570.15</td><td data-label="MA20">7619.62</td><td data-label="MA60">7605.49</td><td data-label="站上MA20">否</td></tr>
 <tr><td data-label="指数">上证50</td><td data-label="当前收盘">2842.74</td><td data-label="MA20">2892.66</td><td data-label="MA60">2915.57</td><td data-label="站上MA20">否</td></tr>
 </table>
-<blockquote><strong>动量策略核心规则</strong>：收盘站上MA20 → 可做多；收盘跌破MA20 → 减仓/空仓；收盘跌破MA60 → 清仓</blockquote>
-<hr>
-<h2>12. 数据局限性</h2>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote><strong>动量策略核心规则</strong>：收盘站上MA20 → 可做多；收盘跌破MA20 → 减仓/空仓；收盘跌破MA60 → 清仓</blockquote></div></details>
+
+</details></details><details class="report-section"><summary><h2>12. 数据局限性</h2></summary>
 <ul><li>历史补数的开高低收和成交量均为收盘日线，成交额按典型价×成交量估算；涉及日期：2026-09-04、2026-09-07、2026-09-08、2026-09-09、2026-09-10、2026-09-11、2026-09-14、2026-09-15、2026-09-16、2026-09-17、2026-09-18、2026-09-21、2026-09-22、2026-09-23、2026-09-24。成交额比值仅作趋势参考。</li><li>个股日线目标交易日较近期完整日少 13 行</li><li>ETF 日线目标交易日较近期完整日少 1 行</li></ul>
-<blockquote>以上局限性意味着：风格分析继续使用宽基指数代理；行业分析使用 ETF 代理并尽量映射到申万行业，但部分主题 ETF 无法直接对应申万行业，已不纳入行业广度统计。</blockquote>
-<hr>
-<p>*报告生成时间：2026-09-27 16:14:48* *数据来源：DuckDB 本地数据库 | 更新时间：2026-09-27 16:14:48* *免责声明：本报告仅为动量策略数据研究，不构成投资建议。*</p></main></body></html>
+<details class="method-note"><summary aria-label="查看口径说明" title="口径说明">?</summary><div class="note-body"><blockquote>以上局限性意味着：风格分析继续使用宽基指数代理；行业分析使用 ETF 代理并尽量映射到申万行业，但部分主题 ETF 无法直接对应申万行业，已不纳入行业广度统计。</blockquote></div></details>
+
+<p>*报告生成时间：2026-09-27 17:39:07* *数据来源：DuckDB 本地数据库 | 更新时间：2026-09-27 17:39:07* *免责声明：本报告仅为动量策略数据研究，不构成投资建议。*</p></details></main></body></html>
