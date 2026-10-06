@@ -1,9 +1,7 @@
 {
-  "generated_at": "2026-10-06 08:35 CST",
+  "generated_at": "2026-10-06 08:37 CST",
   "report_date": "2026-09-30",
   "report_mode": "formal",
   "watch_date": "2026-10-08",
-  "warnings": [
-    "动量日报截至 2026-09-30，尚未更新到最近交易日。"
-  ]
+  "warnings": []
 }
