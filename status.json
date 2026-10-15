@@ -1,8 +1,12 @@
 {
-  "generated_at": "2026-10-15 13:24 CST",
+  "generated_at": "2026-10-15 16:11 CST",
   "report_date": "2026-10-14",
   "report_mode": "formal",
   "watch_date": "2026-10-15",
+  "strategy_plan_date": "2026-10-14",
+  "strategy_plan_status": "ok",
+  "strategy_signal_date": "2026-10-09",
+  "strategy_execution_date": "2026-10-12",
   "panel_date": "2026-10-14",
   "panel_reference_dates": {
     "交通运输": "2026-10-14",
