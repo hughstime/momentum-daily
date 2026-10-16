@@ -1,0 +1,152 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>20261016_latest_update_and_20261016_watch</title><style>
+@font-face {
+  font-family: "MomentumCJK";
+  src: url("file:///System/Library/Fonts/Supplemental/Arial%20Unicode.ttf") format("truetype");
+}
+@page {
+  size: A4 portrait;
+  margin: 10mm;
+}
+:root {
+  color-scheme: light;
+  font-family: "MomentumCJK", "Arial Unicode MS", "STHeiti", "Songti SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  color: #111827;
+  background: #f8fafc;
+}
+html, body {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+body {
+  margin: 0;
+  padding: 32px 18px 56px;
+}
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 30px 34px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
+}
+h1, h2, h3 { line-height: 1.25; margin: 1.3em 0 0.55em; }
+h1 { font-size: 30px; margin-top: 0; }
+h2 { font-size: 22px; border-top: 1px solid #e5e7eb; padding-top: 18px; }
+h3 { font-size: 18px; }
+p, li, blockquote { font-size: 15px; line-height: 1.75; }
+blockquote {
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 22px;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid #dbe3ef;
+  padding: 7px 9px;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #f1f5f9; font-weight: 650; }
+td strong, th strong { font-weight: 750; }
+.pct-pos { color: #dc2626; font-weight: 650; }
+.pct-neg { color: #15803d; font-weight: 650; }
+.pct-zero { color: #475569; font-weight: 600; }
+.key { font-weight: 750; }
+tr:nth-child(even) td { background: #fbfdff; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: #f1f5f9;
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
+@media (max-width: 720px) {
+  body { padding: 0; }
+  main { border: 0; border-radius: 0; padding: 20px 14px; }
+  table { display: block; overflow-x: auto; white-space: nowrap; }
+}
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+  main {
+    max-width: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; padding-top: 10px; }
+  h3 { font-size: 15px; }
+  p, li, blockquote { font-size: 12px; line-height: 1.6; }
+  table {
+    font-size: 10.5px;
+    page-break-inside: auto;
+  }
+  th, td {
+    padding: 5px 6px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  tr { break-inside: avoid; }
+  table.wide-table {
+    display: block;
+    border: 0;
+    font-size: 10.5px;
+  }
+  table.wide-table tr:first-child {
+    display: none;
+  }
+  table.wide-table tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 10px;
+    margin: 0 0 8px;
+    padding: 8px 10px;
+    border: 1px solid #dbe3ef;
+    background: #fff;
+    break-inside: avoid;
+  }
+  table.wide-table td {
+    display: block;
+    border: 0;
+    padding: 0;
+    background: transparent !important;
+    line-height: 1.45;
+  }
+  table.wide-table td::before {
+    content: attr(data-label) "：";
+    font-weight: 700;
+    color: #334155;
+  }
+}
+</style></head><body><main><h1>10 月 15 日新视频、前低破位结算与 10 月 16 日盘前观察</h1>
+<p>冻结于 <strong>2026 年 10 月 16 日 08:04（北京时间）</strong>。<a href="https://space.bilibili.com/259371348/video" rel="noopener noreferrer">2026 年投稿目录</a>增至 <strong>192 条</strong>；昨晚 18:47 新增 <a href="https://www.bilibili.com/video/BV1uaJy6ZE54/" rel="noopener noreferrer">《10/15 复盘日记 无法识别》</a>，约 3 分 45 秒。已保存[原始语音识别稿](../../transcripts/raw/20261015_BV1uaJy6ZE54.md)、[轻度整理稿](../../transcripts/clean/20261015_BV1uaJy6ZE54.md)和[逐条结构化观点](20261015_BV1uaJy6ZE54.json)。本条有有效音轨；“无法识别”是博主对市场的判断，不是转写失败。个别日期和词语仍有听辨疑义，原始层未被覆盖。</p>
+<p>只读提取 <code>momentum.duckdb</code>：七个核心指数共 <strong>1,309 行、187 个交易日</strong>，市场宽度同样覆盖 187 日，最新有效交易日为 <strong>10 月 15 日</strong>。上证开 <strong>3710.70</strong>、高 <strong>3724.56</strong>、低 <strong>3674.82</strong>、收 <strong>3707.48</strong>，较 14 日跌 <strong>1.59%</strong>；深证成指跌 <strong>2.43%</strong>、创业板指跌 <strong>2.92%</strong>。本地 5,492 只股票样本中上涨股占 <strong>7.63%</strong>，较 14 日的 17.64% 再缩窄；MA20 上方占 <strong>14.71%</strong>。股票成交额约 <strong>1.611 万亿元</strong>，高于 14 日的 1.398 万亿元，但仍仅为近 20 日均额的 <strong>94.13%</strong>。股票样本口径的成交额不与新闻所称全 A 股总成交额混同。指数收盘数与<a href="https://finance.eastmoney.com/a/202610153896924726.html" rel="noopener noreferrer">证券时报报道</a>相符。</p>
+<h2>10 月 16 日怎么读</h2>
+<p>给小白：昨天上证一开盘就落在 13 日低点 <strong>3741.53</strong> 下方，全天最高也只有 <strong>3724.56</strong>，说明没有收回这道旧门槛；收在 <strong>3707.48</strong>，仅约 8% 的股票上涨。今天第一眼看昨天低点 <strong>3674.82</strong>，第二眼看能否越过昨天高点 <strong>3724.56</strong>，再看之前跌破的 <strong>3741.53</strong>。<strong>这些都是本研究事前冻结的行情观察位，不是博主公布的今日交易点位。</strong></p>
+<table>
+<tr><th>路径</th><th>含义</th><th>后续动作</th></tr>
+<tr><td data-label="路径">收盘低于 3674.82，上涨股仍不过半</td><td data-label="含义">15 日低点再次被收盘打破，弱势延续</td><td data-label="后续动作">记录新的收盘和低点，重建下一次参考位；不把盘中短暂下破算成收盘破位</td></tr>
+<tr><td data-label="路径">盘中低于 3674.82，但收盘重回 3707.48 上方</td><td data-label="含义">跌破后收回，有短线修复迹象</td><td data-label="后续动作">核对先跌后收的实际路径、上涨股占比及成交额；若宽度不过半，只记局部修复</td></tr>
+<tr><td data-label="路径">收在 3674.82—3724.56 之间，上涨股不过半</td><td data-label="含义">仍在昨日波动区间内，个股弱势未解除</td><td data-label="后续动作">继续观察，不因单根阳线认定反转</td></tr>
+<tr><td data-label="路径">收盘越过 3724.56、但未收复 3741.53</td><td data-label="含义">突破昨日高点，但仍在前低下方</td><td data-label="后续动作">对照上涨股是否过半；若不过半或缩量，仍属有限反弹</td></tr>
+<tr><td data-label="路径">收盘依次收复 3741.53、3761.96 和 3767.23，上涨股过半</td><td data-label="含义">逐级收回 13 日、14 日的失守参考位</td><td data-label="后续动作">观察能否继续接近 3811.81，且股票成交额是否达到近 20 日均额；不得回填成博主预测</td></tr>
+</table>
+<p><strong>失效条件：</strong>“弱势延续”研究情景若出现收盘越过 3741.53 并进一步站回 3767.23、上涨股过半、股票成交额达到近 20 日均额，应停止沿用单边弱势解释；“昨日低点守住”情景若收盘跌破 3674.82 且宽度仍弱，则失败。若价格与宽度冲突，标为待确认，不强行选边。16 日行情尚未发生，以上条件均待验证。本卡不提供个人化投资建议。</p>
+<h2>15 日事前条件结算</h2>
+<p>[15 日盘前卡](20261015_latest_update_and_20261015_watch.md)冻结的“<strong>收盘跌破 3741.53，且上涨股不过半</strong>”<strong>命中</strong>：实际收 3707.48，上涨股 7.63%；同时盘中低见 3674.82。因此“13 日低点守住”假设<strong>失败</strong>。较浅的“收盘低于 3761.96、但仍高于 3741.53”路径<strong>未命中</strong>，不能把它与更深破位路径算成两次命中。盘中下破 3761.96 后收回 3767.23、区间内盘整、越过 3811.81 或 3842.20 的修复路径均<strong>未命中</strong>。15 日最高仅 3724.56，连 3741.53 都未收回。相反，博主在 14 日晚明确说“没有看法、观望”，没有给出 15 日单向 A 股预言；本研究事前路径的命中不是他的方向预测命中，也不是账户收益。</p>
+<h2>新视频：方法、跨市场与事后修正</h2>
+<p>博主 15 日盘后称当天行情“不意外”，回顾自 9 月中下旬以来设想的“全球性危机”，认为未来一段时间可能逐步显现；同时直说对当前所处市场“没有看法、无法识别”，认为市场做出任何动作都合理。<strong>“不意外”是盘后解释，不能改写为昨晚以前已公开的精确跌幅判断。</strong>他此前的全球风险设想保留为历史事前观点，但新视频没有定义“危机”的市场清单、跌幅、统一时限或失效条件，因此现在仍不能判定整体剧本命中。</p>
+<p>本条新视频只泛称“全球其他标的”，<strong>没有分别点名美股、港股、BTC、大宗商品或贵金属的新价格参数，更没有明确用其中一项推出 16 日 A 股涨跌</strong>。14 日视频确实把这些市场放进同一风险叙事，但不得把 14 日提及的资产补写成 15 日视频的新因果输入。其 13—15 日 A 股判断均指向“无法识别/观望”，这是一种状态或风险控制选择，非可评分的涨跌押注。视频未披露新仓位、成交或收益；历史相关表述均为博主自述，未经外部核验。</p>
+<h2>累计口径</h2>
+<p>192 条视频、<strong>1,240 项</strong>结构化观点；按交易日—标的—期限去重且已完成观察的方向信号仍为 <strong>157 个、命中 86 个，54.78%</strong>，同窗口始终看多基准约 <strong>50.32%</strong>。新视频的“无法识别”不增加方向评分。“全球危机”缺具体可量化判据，仍待定义与跨市场数据验证；方向命中率也不是博主实际交易胜率。</p></main></body></html>
