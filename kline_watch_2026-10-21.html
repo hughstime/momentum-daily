@@ -1,0 +1,154 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>20261021_latest_update_and_20261021_watch</title><style>
+@font-face {
+  font-family: "MomentumCJK";
+  src: url("file:///System/Library/Fonts/Supplemental/Arial%20Unicode.ttf") format("truetype");
+}
+@page {
+  size: A4 portrait;
+  margin: 10mm;
+}
+:root {
+  color-scheme: light;
+  font-family: "MomentumCJK", "Arial Unicode MS", "STHeiti", "Songti SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  color: #111827;
+  background: #f8fafc;
+}
+html, body {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+body {
+  margin: 0;
+  padding: 32px 18px 56px;
+}
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 30px 34px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
+}
+h1, h2, h3 { line-height: 1.25; margin: 1.3em 0 0.55em; }
+h1 { font-size: 30px; margin-top: 0; }
+h2 { font-size: 22px; border-top: 1px solid #e5e7eb; padding-top: 18px; }
+h3 { font-size: 18px; }
+p, li, blockquote { font-size: 15px; line-height: 1.75; }
+blockquote {
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 22px;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid #dbe3ef;
+  padding: 7px 9px;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #f1f5f9; font-weight: 650; }
+td strong, th strong { font-weight: 750; }
+.pct-pos { color: #dc2626; font-weight: 650; }
+.pct-neg { color: #15803d; font-weight: 650; }
+.pct-zero { color: #475569; font-weight: 600; }
+.key { font-weight: 750; }
+tr:nth-child(even) td { background: #fbfdff; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: #f1f5f9;
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+hr { border: 0; border-top: 1px solid #e5e7eb; margin: 22px 0; }
+@media (max-width: 720px) {
+  body { padding: 0; }
+  main { border: 0; border-radius: 0; padding: 20px 14px; }
+  table { display: block; overflow-x: auto; white-space: nowrap; }
+}
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+  main {
+    max-width: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; padding-top: 10px; }
+  h3 { font-size: 15px; }
+  p, li, blockquote { font-size: 12px; line-height: 1.6; }
+  table {
+    font-size: 10.5px;
+    page-break-inside: auto;
+  }
+  th, td {
+    padding: 5px 6px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  tr { break-inside: avoid; }
+  table.wide-table {
+    display: block;
+    border: 0;
+    font-size: 10.5px;
+  }
+  table.wide-table tr:first-child {
+    display: none;
+  }
+  table.wide-table tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 10px;
+    margin: 0 0 8px;
+    padding: 8px 10px;
+    border: 1px solid #dbe3ef;
+    background: #fff;
+    break-inside: avoid;
+  }
+  table.wide-table td {
+    display: block;
+    border: 0;
+    padding: 0;
+    background: transparent !important;
+    line-height: 1.45;
+  }
+  table.wide-table td::before {
+    content: attr(data-label) "：";
+    font-weight: 700;
+    color: #334155;
+  }
+}
+</style></head><body><main><h1>10 月 20 日新视频、前卡结算与 10 月 21 日盘前观察</h1>
+<p>冻结于 <strong>2026 年 10 月 21 日 08:03（北京时间）</strong>。2026 年<a href="https://space.bilibili.com/259371348/video" rel="noopener noreferrer">投稿目录</a>现有 <strong>195 条</strong>，新增 <a href="https://www.bilibili.com/video/BV1kinc6FEqk/" rel="noopener noreferrer">10 月 20 日 18:00 的《10/20 复盘日记 吹哨人》</a>，约 3 分 55 秒。已保存[原始语音识别稿](../../transcripts/raw/20261020_BV1kinc6FEqk.md)、[轻度整理稿](../../transcripts/clean/20261020_BV1kinc6FEqk.md)和[逐条结构化观点](20261020_BV1kinc6FEqk.json)。本条有有效语音；“车轻/车重”“小黄/小白”“大饼”等代称的对象和部分词句仍需原视频回听或画面复核，不据猜测填入精确指标。</p>
+<p>只读提取 <code>momentum.duckdb</code> 的七个核心指数，共 <strong>1,330 行、190 个交易日</strong>；市场宽度也至 <strong>10 月 20 日</strong>。上证开 <strong>3718.44</strong>、低 <strong>3702.44</strong>、高 <strong>3740.07</strong>、收 <strong>3735.37</strong>，较 19 日 <strong>+0.12%</strong>；<a href="https://finance.eastmoney.com/a/202610203901284985.html" rel="noopener noreferrer">公开收评</a>亦报 3735.37。深证成指 <strong>-0.14%</strong>，创业板指 <strong>-0.26%</strong>，沪深 300 <strong>-0.54%</strong>；中证 500 <strong>+0.60%</strong>、中证 1000 <strong>+1.02%</strong>。本地 5,494 只股票样本中上涨占 <strong>67.60%</strong>，高于 19 日的 40.73%；但仅 <strong>20.42%</strong> 站在各自 MA20 之上。样本成交额约 <strong>1.463 万亿元</strong>，为近 20 日均额的 <strong>87.55%</strong>。这说明更多股票当日反弹了，不能说“全市场都在跌”；但一日上涨不等于多数股票已修复中期结构。</p>
+<h2>10 月 21 日怎么读</h2>
+<p>给小白：昨天上证像在窄门内反复走动，低点 <strong>3702.44</strong> 没跌破前一日低点 <strong>3692.29</strong>，最高 <strong>3740.07</strong> 也没碰到前一日高点 <strong>3743.80</strong>；收在 <strong>3735.37</strong>。今天先看是否突破昨天这扇门，再看突破后收盘能否守住，同时观察上涨股比例与成交。以下是本研究按已知行情设置的观察尺，<strong>不是博主公布的买卖点</strong>。</p>
+<table>
+<tr><th>路径</th><th>含义</th><th>后续动作</th></tr>
+<tr><td data-label="路径">收盘跌破 3702.44，上涨股不足半数</td><td data-label="含义">昨日低点失守，昨日多数股票上涨的修复未持续</td><td data-label="后续动作">再核对 3692.29、3681.28 和 3674.82；只记实际收盘，不把盘中触碰说成破位确认</td></tr>
+<tr><td data-label="路径">收盘跌破 3692.29，再跌破 3674.82，且上涨股不足半数</td><td data-label="含义">近期低点逐级失守，区间底部假设失败</td><td data-label="后续动作">冻结失败结果，重建观察基准；不沿用“旧低守住”的解释</td></tr>
+<tr><td data-label="路径">盘中跌破 3702.44，收盘重回 3735.37 上方且上涨股过半</td><td data-label="含义">下探后收回，仍可能是区间内修复</td><td data-label="后续动作">核对实际先后路径、是否越过 3740.07/3743.80；不能单凭收回称为反转</td></tr>
+<tr><td data-label="路径">收在 3702.44—3743.80 之间</td><td data-label="含义">仍是区间拉扯，方向未由收盘确认</td><td data-label="后续动作">继续记录收盘位置、上涨股占比、成交额；博主的“反转参数”仍无公开阈值</td></tr>
+<tr><td data-label="路径">收盘站上 3743.80，再站上 3750.77，上涨股过半</td><td data-label="含义">短线向上修复比 20 日更强</td><td data-label="后续动作">再看 3761.96、3767.23；核对成交额是否至少回到近 20 日均额</td></tr>
+<tr><td data-label="路径">收盘站上 3767.23，上涨股过半且样本成交额达到近 20 日均额</td><td data-label="含义">对“短线弱势主导”研究情景构成较强反证</td><td data-label="后续动作">修正研究情景，不能把该研究阈值倒写成博主已公开的“反转参数”</td></tr>
+</table>
+<p><strong>失效条件：</strong>若以“弱势主导”作为研究假设，收盘站上 <strong>3767.23</strong>、上涨股过半且成交恢复到近 20 日均额，须停止沿用该短线解释。若观察昨日低点能否守住，则收盘破 <strong>3702.44</strong> 已使该局部假设失效；再破 <strong>3692.29/3674.82</strong> 是更强的下行证据。价格、宽度和量能不一致时记为冲突而非强行选边。21 日尚未开盘，以上均待验证；不提供个人化投资建议。</p>
+<h2>20 日事前条件结算</h2>
+<p>[20 日盘前卡](20261020_latest_update_and_20261020_watch.md)冻结后，上证实际低 <strong>3702.44</strong>、高 <strong>3740.07</strong>、收 <strong>3735.37</strong>。低点未到 <strong>3692.29</strong>，故“跌破后收回”路径未触发；“收盘破 3692.29/3674.82”两条下行路径均<strong>未触发</strong>。收盘位于 <strong>3692.29—3743.80</strong> 内，区间路径<strong>命中</strong>，但并未盘中越过 3741.53，不能把它说成“冲高回落”。收盘没有越过 <strong>3743.80、3750.77、3767.23</strong>，两条向上修复路径均<strong>未命中</strong>。上涨股占 67.60% 支持股票层面的日内改善，成交仅为 20 日均额 87.55%、MA20 上方股票只有 20.42%，所以“宽度改善”与“趋势确认”分开记。这些是本研究观察尺的结果，不计入博主方向胜率。</p>
+<h2>新视频：由 A 股观望升级为全球风险警报</h2>
+<p>博主于 20 日盘后仍称 A 股“混沌、观望”“不具备反转参数”。他对是否有像样反弹加了“车轻/车重”的口头条件，但没有公开可复算的判别方式，不能据此生成精确交易规则。相较 19 日“不知道次日怎样”，本条明确把视角扩到全球股票和商品风险：认为 A 股、港股、美股、日经、韩国等可能面临大幅下跌，口头给美股 <strong>25%—35%</strong> 的跌幅和约 <strong>一月以内</strong> 的时间窗。这是 <strong>20 日 18:00 后新提出/重申的远期风险判断</strong>，应从此时起独立跟踪，不因 20 日白天已经发生的行情宣布命中；对象指数、基准价及自然月/交易日口径并未明确，后续评分须先补足映射。</p>
+<p>他追述 9 月 18、23、28、30 日和 10 月 13—14 日的风险阅读与“下注”。这些追述属于<strong>事后叙述</strong>，不能替换各日已冻结的原始视频；“尝试性下注”“重大决定下注”也仅是博主自述，未见成交、仓位或收益凭证。对“近期商品、港股下跌”的举例同样只视为其解释，不自动确认全部历史预警精准。</p>
+<p>跨市场因果单列：这次他确实<strong>明确把 A 股、港股、美股及日经等放进同一个全球风险剧本</strong>，并提商品、疑似贵金属与“大饼”（疑似 BTC）。但他没有给出哪一个外部市场的价格变化作为 <strong>21 日 A 股方向的先行触发器</strong>，也未披露跨市场联动的量化参数。故可记录“同一风险判断覆盖多个市场”，不可改写为“BTC 跌所以 A 股必跌”或“贵金属跌必然传导 A 股”。中东“小油油”及“车轻/车重”等词需进一步回听，暂不落为明确品种。</p>
+<h2>累计口径</h2>
+<p>195 条视频、<strong>1,258 项</strong>逐条观点，继续按原始/整理/分析三层保留。已完成且按交易日—标的—期限去重的方向信号仍为 <strong>157 个、命中 86 个，54.78%</strong>；同窗口始终看多基准约 <strong>50.32%</strong>。20 日新提出的全球风险窗口仍<strong>待验证</strong>，不计作命中。此命中率不是交易胜率，博主自述仓位、成交、收益未经外部核验。</p></main></body></html>
