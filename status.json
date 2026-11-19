@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19 08:49 CST",
+  "generated_at": "2026-11-19 08:50 CST",
   "report_date": "2026-11-18",
   "report_mode": "formal",
   "watch_date": "2026-11-19",
@@ -11,7 +11,26 @@
   "market_data_quality": {
     "status": "partial",
     "finished_at": "2026-11-18T22:43:20.493549+00:00",
-    "full_market_acceptance": false
+    "full_market_acceptance": false,
+    "us_current_prices": {
+      "target_session": "2026-11-18",
+      "counts": {
+        "objects": 1968,
+        "current": 1965,
+        "watched": 3,
+        "unexplained_missing": 0
+      },
+      "watched": [
+        "ITGR",
+        "MOG-B",
+        "OPAY"
+      ],
+      "independent_current_tail_count": 124,
+      "yahoo_only_stale_count": 127,
+      "full_ohlcv_acceptance": false,
+      "extended_current": 42,
+      "extended_total": 42
+    }
   },
   "formal_allowed": true,
   "panel_reference_dates": {
@@ -62,6 +81,7 @@
     "美债10Y": "2026-11-18"
   },
   "warnings": [
-    "跨市场数据本轮未全部更新：部分行情失败、陈旧或被质量检查隔离；原日报正式验收不代表全市场验收。"
+    "跨市场数据本轮未全部更新：部分行情失败、陈旧或被质量检查隔离；原日报正式验收不代表全市场验收。",
+    "美股逐对象核验（2026-11-18）：1965/1968项有当日有效价格；无有效新K线继续跟踪：ITGR、MOG-B、OPAY。其中124项现价来自备用源，量额按来源保留缺失或部分覆盖；Yahoo专用缓存仍有127项旧行，不能将缓存最大日期视为全量最新。"
   ]
 }
