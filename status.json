@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-19 08:50 CST",
-  "report_date": "2026-11-18",
+  "generated_at": "2026-11-20 08:36 CST",
+  "report_date": "2026-11-19",
   "report_mode": "formal",
-  "watch_date": "2026-11-19",
-  "strategy_plan_date": "2026-11-18",
+  "watch_date": "2026-11-20",
+  "strategy_plan_date": "2026-11-19",
   "strategy_plan_status": "ok",
   "strategy_signal_date": "2026-11-13",
   "strategy_execution_date": "2026-11-16",
-  "panel_date": "2026-11-18",
+  "panel_date": "2026-11-19",
   "market_data_quality": {
     "status": "partial",
-    "finished_at": "2026-11-18T22:43:20.493549+00:00",
+    "finished_at": "2026-11-19T22:50:09.557271+00:00",
     "full_market_acceptance": false,
     "us_current_prices": {
-      "target_session": "2026-11-18",
+      "target_session": "2026-11-19",
       "counts": {
-        "objects": 1968,
-        "current": 1965,
+        "objects": 1960,
+        "current": 1957,
         "watched": 3,
         "unexplained_missing": 0
       },
@@ -25,11 +25,31 @@
         "MOG-B",
         "OPAY"
       ],
-      "independent_current_tail_count": 124,
-      "yahoo_only_stale_count": 127,
+      "independent_current_tail_count": 103,
+      "yahoo_only_stale_count": 106,
       "full_ohlcv_acceptance": false,
       "extended_current": 42,
-      "extended_total": 42
+      "extended_total": 42,
+      "cache_status": "blocked",
+      "cache_date": "2026-11-18",
+      "cache_blocked_by_etfs": [
+        "ITB"
+      ],
+      "source_day_note": "USD index and equities/CME19; UTC currencies18 because current UTC day not closed during06:30BJT"
+    },
+    "asia_gaps": {
+      "target_session": "2026-11-19",
+      "industry_effective_dates": {
+        "2026-11-18": 155
+      },
+      "hk_no_new_trade_reports": [
+        "1551.HK",
+        "2299.HK",
+        "2596.HK",
+        "6199.HK"
+      ],
+      "industry_HLC_open_missing": 10,
+      "full_market_acceptance": false
     }
   },
   "formal_allowed": true,
@@ -65,23 +85,26 @@
     "银行": "2026-11-18",
     "非银金融": "2026-11-18",
     "食品饮料": "2026-11-18",
-    "上证指数": "2026-11-18",
-    "中证500": "2026-11-18",
-    "创业板指": "2026-11-18",
-    "纳指": "2026-11-18",
-    "标普500": "2026-11-18",
-    "美股科技XLK": "2026-11-18",
-    "美股能源XLE": "2026-11-18",
-    "美股材料XLB": "2026-11-18",
-    "恒生": "2026-11-18",
-    "SGE黄金": "2026-11-18",
-    "沪铜": "2026-11-18",
-    "沪银": "2026-11-18",
-    "原油SC": "2026-11-18",
-    "美债10Y": "2026-11-18"
+    "上证指数": "2026-11-19",
+    "中证500": "2026-11-19",
+    "创业板指": "2026-11-19",
+    "纳指": "2026-11-19",
+    "标普500": "2026-11-19",
+    "美股科技XLK": "2026-11-19",
+    "美股能源XLE": "2026-11-19",
+    "美股材料XLB": "2026-11-19",
+    "恒生": "2026-11-19",
+    "SGE黄金": "2026-11-19",
+    "沪铜": "2026-11-19",
+    "沪银": "2026-11-19",
+    "原油SC": "2026-11-19",
+    "美债10Y": "2026-11-19"
   },
   "warnings": [
+    "监测面板的部分行业或外围数据日期较早；各项实际收盘日期已在面板标明。",
     "跨市场数据本轮未全部更新：部分行情失败、陈旧或被质量检查隔离；原日报正式验收不代表全市场验收。",
-    "美股逐对象核验（2026-11-18）：1965/1968项有当日有效价格；无有效新K线继续跟踪：ITGR、MOG-B、OPAY。其中124项现价来自备用源，量额按来源保留缺失或部分覆盖；Yahoo专用缓存仍有127项旧行，不能将缓存最大日期视为全量最新。"
+    "美股逐对象核验（2026-11-19）：1957/1960项有当日有效价格；无有效新K线继续跟踪：ITGR、MOG-B、OPAY。其中103项现价来自备用源，量额按来源保留缺失或部分覆盖；Yahoo主源仍有106项旧行。",
+    "美股专用缓存本轮门禁未通过，整体保留 2026-11-18；缺目标日有效Yahoo K线的ETF：ITB。不会以页面生成日期冒充该缓存已更新。",
+    "申万155个行业指数尚无2026-11-19有效日线，保留此前有效历史（末日：2026-11-18）；面板按各自实际日期展示。原日报正式验收不覆盖此缺口。"
   ]
 }
